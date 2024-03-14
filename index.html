@@ -18,7 +18,10 @@
         <label for="input-teste-1">
           Insira o &theta;
         </label>
-        <input type="number" id="valor-theta" />
+        <div class="warningInput">
+          <span class="spanTeste"></span>
+        </div>
+        <input type="number" id="valor-theta" onfocus="addDivWithAlert()"/>
       </div>
 
       <div class="resultado"></div>

@@ -1,6 +1,8 @@
 const tamanhoPe = document.querySelector('#formulario')
 const valorR = document.querySelector('#valor-r')
 const valorTheta = document.querySelector('#valor-theta')
+const warningInputRadianos = document.querySelector('.warningInput')
+const spanTeste = document.querySelector('.spanTeste')
 
 const divDeResultado = document.querySelector('.resultado')
 const divDoResumo = document.querySelector('.resume')
@@ -30,12 +32,18 @@ function polarToCartesian(r, thetaDegrees) {
 }
 
 botaoExplicacao.addEventListener('click', () => {
-  primeiroResultado.innerHTML = polarToCartesian(
-    Number(valorR.value),
-    Number(valorTheta.value),
-  ).x
-  secondResult.innerHTML = polarToCartesian(
-    Number(valorR.value),
-    Number(valorTheta.value),
-  ).y
+  primeiroResultado.innerHTML = `Suas cordenadas cartesianas ficam dessa forma: (${
+    polarToCartesian(Number(valorR.value), Number(valorTheta.value)).x
+  }, ${polarToCartesian(Number(valorR.value), Number(valorTheta.value)).y})`
+})
+
+valorTheta.addEventListener('focusin', () => {
+  spanTeste.className = 'colorRed'
+  spanTeste.innerHTML = `Coloque o valor de θ em graus`
+  warningInputRadianos.appendChild(spanTeste)
+})
+
+valorTheta.addEventListener('focusout', () => {
+  spanTeste.classList.add('removeSpan')
+  // warningInputRadianos.remove()
 })
