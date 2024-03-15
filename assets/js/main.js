@@ -4,6 +4,12 @@ const valorTheta = document.querySelector('#valor-theta')
 const warningInputRadianos = document.querySelector('.warningInput')
 const spanTeste = document.querySelector('.spanTeste')
 
+// Imports do teseract
+const inputImage = document.querySelector('.input-image')
+const btnAdImage = document.querySelector('.btnAdcImage')
+const saidaDeTexto = document.querySelector('.output-text')
+const previewImage = document.querySelector('.preview')
+
 const divDeResultado = document.querySelector('.resultado')
 const divDoResumo = document.querySelector('.resume')
 const botaoExplicacao = document.querySelector('.botaoExplicacao')
@@ -45,5 +51,17 @@ valorTheta.addEventListener('focusin', () => {
 
 valorTheta.addEventListener('focusout', () => {
   spanTeste.classList.add('removeSpan')
-  // warningInputRadianos.remove()
+})
+
+// Aqui começa a lógica de lê imagem
+
+btnAdImage.addEventListener('click', () => {
+  inputImage.click()
+})
+
+inputImage.addEventListener('change', () => {
+  let fileImage = inputImage.files[0]
+  console.log('Exemplo de imagem', fileImage)
+
+  previewImage.src = URL.createObjectURL(fileImage)
 })

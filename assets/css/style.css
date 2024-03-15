@@ -116,3 +116,21 @@ form button:hover {
 .removeSpan {
   display: none;
 }
+
+.container-image {
+  background-color: red;
+}
+
+.image-result {
+  width: 50%;
+  margin: auto;
+  background-color: yellow;
+}
+
+.preview {
+  margin: auto;
+  display: block;
+  border: solid 2px;
+  width: 50%;
+
+}
