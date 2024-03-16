@@ -143,3 +143,15 @@ form button:hover {
   margin: auto;
   padding-top: 30px;
 }
+
+
+
+@media (min-width: 700px) { 
+
+ }
+
+ @media (max-width: 1024px) {
+  .ifram-geogebra {
+    display: none;
+  }
+}
