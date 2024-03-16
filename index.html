@@ -7,37 +7,43 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <section class="container">
-      <h1>PCC Geometria Analítica</h1>
-
-      <p>Essa é uma calculadora de conversão de coordenada Polar para coordenada cartesiana.</p>
-
-      <p>Orientações &pi; = 180&deg;</p>
-      <p>Coloque sempre o valor de &theta; em graus</p>
-      <div class="inputFormulario">
-        <label for="input-teste-1">
-          Insira o R
-        </label>
-        <input type="number" id="valor-r"/>
-      </br>
-        <label for="input-teste-1">
-          Insira o &theta;
-        </label>
-        <div class="warningInput">
-          <span class="spanTeste"></span>
+    <div class="main">
+      <section class="container">
+        <h1>PCC Geometria Analítica</h1>
+        <p>Essa é uma calculadora de conversão de coordenada Polar para coordenada cartesiana.</p>
+        <p>Orientações &pi; = 180&deg;</p>
+        <p>Coloque sempre o valor de &theta; em graus</p>
+        <div class="inputFormulario">
+          <label for="input-teste-1">
+            Insira o R
+          </label>
+          <input type="number" id="valor-r"/>
+        </br>
+          <label for="input-teste-1">
+            Insira o &theta;
+          </label>
+          <div class="warningInput">
+            <span class="spanTeste"></span>
+          </div>
+          <input type="number" id="valor-theta" onfocus="addDivWithAlert()"/>
         </div>
-        <input type="number" id="valor-theta" onfocus="addDivWithAlert()"/>
-      </div>
+  
+        <div class="resultado"></div>
+        <div class="resume"></div>
+        <button class="botaoExplicacao">Click me</button>
+  
+        <div class="explicacao">
+          <li class="resultado_transforme_polar_cartesiano"></li>
+          <li class="resultado_transforme_polar_cartesiano-2"></li>
+        </div>
+      </section>
 
-      <div class="resultado"></div>
-      <div class="resume"></div>
-      <button class="botaoExplicacao">Click me</button>
-
-      <div class="explicacao">
-        <li class="resultado_transforme_polar_cartesiano"></li>
-        <li class="resultado_transforme_polar_cartesiano-2"></li>
+      <div class="ifram-geogebra">
+        <iframe src="https://www.geogebra.org/classic/jvr4gkpw?embed" width="1300" height="800" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
       </div>
-    </section>
+    </div>
+    
+
 
     <!-- <section class="container-image">
       <div class="image-result">

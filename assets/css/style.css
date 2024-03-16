@@ -18,6 +18,11 @@ body {
   line-height: 1.5em;
 }
 
+.main {
+  display: flex;
+  width: 100%;
+}
+
 .container {
   max-width: 640px;
   margin: 50px auto;
@@ -132,5 +137,9 @@ form button:hover {
   display: block;
   border: solid 2px;
   width: 50%;
+}
 
+.ifram-geogebra {
+  margin: auto;
+  padding-top: 30px;
 }
